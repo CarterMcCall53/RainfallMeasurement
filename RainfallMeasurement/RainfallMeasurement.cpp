@@ -3,8 +3,8 @@
 *  30 August 2022
 *  Purpose:
 *		Create program to measure total and average rainfall throughout the year
-*  Modified 1 September 2022
-*		Rewrite the program
+*  Modified 2 September 2022
+*		Optimized loop to handle more than 1 year
 */
 
 #include <iostream>
