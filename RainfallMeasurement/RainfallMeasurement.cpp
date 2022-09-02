@@ -17,21 +17,19 @@ int main() {
 		double rain, total = 0;
 		string month[NUM_MONTHS] = { "January", "February", "March", "April", "May", "June", "July", "August",
 			"September", "October", "November", "December" };
-		double janRain = 0, febRain = 0, marRain = 0, aprRain = 0, mayRain = 0, junRain = 0, julRain = 0,
-			augRain = 0, sepRain = 0, octRain = 0, novRain = 0, decRain = 0;
-		double monthRain[NUM_MONTHS] = { janRain, febRain, marRain, aprRain, mayRain, junRain, julRain, augRain,
-			sepRain, octRain, novRain, decRain };
+		double monthRain[NUM_MONTHS];
 		int year;
+		for (int i = 0; i < NUM_MONTHS; i++) monthRain[i] = 0;
 		cout << "What years rainfall do you want to calculate? ";
 		cin >> year;
-		for (int i = 0; i < 12; i++) {
+		for (int i = 0; i < NUM_MONTHS; i++) {
 			cout << "Enter the rainfall in inches for " << month[i] << ": ";
 			cin >> rain;
 			total += rain;
 			monthRain[i] = rain;
 		}
 		cout << "\n" << year << " Rainfall Data" << endl;
-		for (int i = 0; i < 12; i++) {
+		for (int i = 0; i < NUM_MONTHS; i++) {
 			cout << month[i] << ":    " << monthRain[i] << " in" << endl;
 		}
 		cout << "Total rainfall for " << year << ": " << total << " inches" << endl;
