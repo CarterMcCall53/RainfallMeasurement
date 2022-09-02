@@ -12,11 +12,12 @@ using namespace std;
 
 int main() {
 	string repeat;
+	char repChar;
 	do {
 		const int NUM_MONTHS = 12;
 		double rain, total = 0;
-		string month[NUM_MONTHS] = { "January", "February", "March", "April", "May", "June", "July", "August",
-			"September", "October", "November", "December" };
+		string month[NUM_MONTHS] = { "January", "February", "March", "April", "May", "June",
+			"July", "August", "September", "October", "November", "December" };
 		double monthRain[NUM_MONTHS];
 		int year;
 		for (int i = 0; i < NUM_MONTHS; i++) monthRain[i] = 0;
@@ -34,7 +35,8 @@ int main() {
 		}
 		cout << "Total rainfall for " << year << ": " << total << " inches" << endl;
 		cout << "Average rainfall per month: " << total / 12 << " inches" << endl;
-		cout << "\nWould you like to calculate rainfall numbers for another year? ";
+		cout << "\nWould you like to calculate rainfall numbers for another year? (Y|N) ";
 		cin >> repeat;
-	} while (repeat == "yes");
+		repChar = tolower(repeat[0]);
+	} while (repChar == 'y');
 }
