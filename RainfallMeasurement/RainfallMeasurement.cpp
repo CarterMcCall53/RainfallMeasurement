@@ -35,7 +35,7 @@ int main() {
 		}
 		cout << "Total rainfall for " << year << ": " << total << " inches" << endl;
 		cout << "Average rainfall per month: " << total / 12 << " inches" << endl;
-		cout << "\nWould you like to calculate rainfall numbers for another year? (Y|N) ";
+		cout << "\nWould you like to calculate rainfall numbers for another year? (Y|N): ";
 		cin >> repeat;
 		repChar = tolower(repeat[0]);
 	} while (repChar == 'y');
